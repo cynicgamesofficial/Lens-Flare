@@ -1,0 +1,50 @@
+user bool clf_pp_lensflares = true;
+user float clf_pp_lensflares_threshold = 0.15;
+user int clf_pp_lensflares_samples = 22;
+user float clf_pp_lensflares_distance = 0.014;
+user float clf_pp_lensflares_amount = 0.7;
+
+user float clf_pp_lensflares_elem0_size = 0.5;
+user float clf_pp_lensflares_elem0_scale = 1.0;
+user float clf_pp_lensflares_elem0_intensity = 1.3;
+user float clf_pp_lensflares_elem0_tint_r = 1.0;
+user float clf_pp_lensflares_elem0_tint_g = 0.9;
+user float clf_pp_lensflares_elem0_tint_b = 0.8;
+
+user float clf_pp_lensflares_elem1_size = 0.35;
+user float clf_pp_lensflares_elem1_scale = 1.0;
+user float clf_pp_lensflares_elem1_intensity = 0.9;
+user float clf_pp_lensflares_elem1_tint_r = 0.8;
+user float clf_pp_lensflares_elem1_tint_g = 0.9;
+user float clf_pp_lensflares_elem1_tint_b = 1.0;
+
+user float clf_pp_lensflares_elem2_size = 0.8;
+user float clf_pp_lensflares_elem2_scale = 1.0;
+user float clf_pp_lensflares_elem2_intensity = 0.8;
+user float clf_pp_lensflares_elem2_tint_r = 1.0;
+user float clf_pp_lensflares_elem2_tint_g = 0.85;
+user float clf_pp_lensflares_elem2_tint_b = 0.9;
+
+user float clf_pp_lensflares_elem3_size = 1.0;
+user float clf_pp_lensflares_elem3_scale = 1.0;
+user float clf_pp_lensflares_elem3_intensity = 0.7;
+user float clf_pp_lensflares_elem3_tint_r = 0.9;
+user float clf_pp_lensflares_elem3_tint_g = 1.0;
+user float clf_pp_lensflares_elem3_tint_b = 0.95;
+
+user float clf_pp_lensflares_elem4_size = 0.98;
+user float clf_pp_lensflares_elem4_scale = -1.0;
+user float clf_pp_lensflares_elem4_intensity = 1.5;
+user float clf_pp_lensflares_elem4_tint_r = 1.0;
+user float clf_pp_lensflares_elem4_tint_g = 1.0;
+user float clf_pp_lensflares_elem4_tint_b = 0.8;
+
+user float clf_pp_lensflares_elem5_size = 0.6;
+user float clf_pp_lensflares_elem5_scale = 1.0;
+user float clf_pp_lensflares_elem5_intensity = 0.85;
+user float clf_pp_lensflares_elem5_tint_r = 0.95;
+user float clf_pp_lensflares_elem5_tint_g = 0.8;
+user float clf_pp_lensflares_elem5_tint_b = 1.0;
+
+user float clf_pp_lensflares_chromatic = 0.5;
+user float clf_pp_lensflares_chromatic_blend = 0.3;

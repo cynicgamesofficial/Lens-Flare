@@ -1,0 +1,119 @@
+version "2.5"
+
+class ClfPostProcessShaderHandler : StaticEventHandler
+{
+	override void RenderOverlay(RenderEvent e)
+	{
+		PlayerInfo p = players[consoleplayer];
+		
+		if (Cvar.GetCVar("clf_pp_lensflares", p).GetInt() > 0)			EnableLensFlares();
+		else														DisableLensFlares();
+	}
+	
+	ui void EnableLensFlares(void)
+	{
+		PlayerInfo p = players[consoleplayer];
+		
+		Shader.SetEnabled(p, "lensflareshader", true);
+		
+		double threshold = CVar.GetCVar("clf_pp_lensflares_threshold", p).GetFloat();
+		double distance = CVar.GetCVar("clf_pp_lensflares_distance", p).GetFloat();
+		double amount = CVar.GetCVar("clf_pp_lensflares_amount", p).GetFloat();
+		double samples = CVar.GetCVar("clf_pp_lensflares_samples", p).GetInt();
+		
+		Shader.SetUniform1f(p, "lensflareshader", "threshold", threshold);
+		Shader.SetUniform1f(p, "lensflareshader", "distance", distance);
+		Shader.SetUniform1f(p, "lensflareshader", "samples", samples);
+		Shader.SetUniform1f(p, "lensflareshader", "amount", amount);
+		
+		Shader.SetUniform1f(p, "lensflareshader", "chromaticStrength", 
+			CVar.GetCVar("clf_pp_lensflares_chromatic", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "chromaticBlend", 
+			CVar.GetCVar("clf_pp_lensflares_chromatic_blend", p).GetFloat());
+		
+		Shader.SetUniform1f(p, "lensflareshader", "elem0_size", 
+			CVar.GetCVar("clf_pp_lensflares_elem0_size", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem0_scale", 
+			CVar.GetCVar("clf_pp_lensflares_elem0_scale", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem0_intensity", 
+			CVar.GetCVar("clf_pp_lensflares_elem0_intensity", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem0_tint_r",
+			CVar.GetCVar("clf_pp_lensflares_elem0_tint_r", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem0_tint_g",
+			CVar.GetCVar("clf_pp_lensflares_elem0_tint_g", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem0_tint_b",
+			CVar.GetCVar("clf_pp_lensflares_elem0_tint_b", p).GetFloat());
+		
+		Shader.SetUniform1f(p, "lensflareshader", "elem1_size", 
+			CVar.GetCVar("clf_pp_lensflares_elem1_size", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem1_scale", 
+			CVar.GetCVar("clf_pp_lensflares_elem1_scale", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem1_intensity", 
+			CVar.GetCVar("clf_pp_lensflares_elem1_intensity", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem1_tint_r",
+			CVar.GetCVar("clf_pp_lensflares_elem1_tint_r", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem1_tint_g",
+			CVar.GetCVar("clf_pp_lensflares_elem1_tint_g", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem1_tint_b",
+			CVar.GetCVar("clf_pp_lensflares_elem1_tint_b", p).GetFloat());
+		
+		Shader.SetUniform1f(p, "lensflareshader", "elem2_size", 
+			CVar.GetCVar("clf_pp_lensflares_elem2_size", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem2_scale", 
+			CVar.GetCVar("clf_pp_lensflares_elem2_scale", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem2_intensity", 
+			CVar.GetCVar("clf_pp_lensflares_elem2_intensity", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem2_tint_r",
+			CVar.GetCVar("clf_pp_lensflares_elem2_tint_r", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem2_tint_g",
+			CVar.GetCVar("clf_pp_lensflares_elem2_tint_g", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem2_tint_b",
+			CVar.GetCVar("clf_pp_lensflares_elem2_tint_b", p).GetFloat());
+		
+		Shader.SetUniform1f(p, "lensflareshader", "elem3_size", 
+			CVar.GetCVar("clf_pp_lensflares_elem3_size", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem3_scale", 
+			CVar.GetCVar("clf_pp_lensflares_elem3_scale", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem3_intensity", 
+			CVar.GetCVar("clf_pp_lensflares_elem3_intensity", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem3_tint_r",
+			CVar.GetCVar("clf_pp_lensflares_elem3_tint_r", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem3_tint_g",
+			CVar.GetCVar("clf_pp_lensflares_elem3_tint_g", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem3_tint_b",
+			CVar.GetCVar("clf_pp_lensflares_elem3_tint_b", p).GetFloat());
+		
+		Shader.SetUniform1f(p, "lensflareshader", "elem4_size", 
+			CVar.GetCVar("clf_pp_lensflares_elem4_size", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem4_scale", 
+			CVar.GetCVar("clf_pp_lensflares_elem4_scale", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem4_intensity", 
+			CVar.GetCVar("clf_pp_lensflares_elem4_intensity", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem4_tint_r",
+			CVar.GetCVar("clf_pp_lensflares_elem4_tint_r", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem4_tint_g",
+			CVar.GetCVar("clf_pp_lensflares_elem4_tint_g", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem4_tint_b",
+			CVar.GetCVar("clf_pp_lensflares_elem4_tint_b", p).GetFloat());
+		
+		Shader.SetUniform1f(p, "lensflareshader", "elem5_size", 
+			CVar.GetCVar("clf_pp_lensflares_elem5_size", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem5_scale", 
+			CVar.GetCVar("clf_pp_lensflares_elem5_scale", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem5_intensity", 
+			CVar.GetCVar("clf_pp_lensflares_elem5_intensity", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem5_tint_r",
+			CVar.GetCVar("clf_pp_lensflares_elem5_tint_r", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem5_tint_g",
+			CVar.GetCVar("clf_pp_lensflares_elem5_tint_g", p).GetFloat());
+		Shader.SetUniform1f(p, "lensflareshader", "elem5_tint_b",
+			CVar.GetCVar("clf_pp_lensflares_elem5_tint_b", p).GetFloat());
+	}
+
+	ui void DisableLensFlares(void)
+	{
+		PlayerInfo p = players[consoleplayer];
+		Shader.SetEnabled(p, "lensflareshader", false);
+	}
+	
+}

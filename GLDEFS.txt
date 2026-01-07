@@ -1,0 +1,55 @@
+HardwareShader PostProcess Scene
+{
+	Name "lensflareshader"
+	Shader "Shaders/LensFlare.fp" 330
+	
+	Uniform float threshold
+	Uniform int samples
+	Uniform float distance
+	Uniform float amount
+	
+	Uniform float chromaticStrength
+	Uniform float chromaticBlend
+	
+	Uniform float elem0_size
+	Uniform float elem0_scale
+	Uniform float elem0_intensity
+	Uniform float elem0_tint_r
+	Uniform float elem0_tint_g
+	Uniform float elem0_tint_b
+	
+	Uniform float elem1_size
+	Uniform float elem1_scale
+	Uniform float elem1_intensity
+	Uniform float elem1_tint_r
+	Uniform float elem1_tint_g
+	Uniform float elem1_tint_b
+	
+	Uniform float elem2_size
+	Uniform float elem2_scale
+	Uniform float elem2_intensity
+	Uniform float elem2_tint_r
+	Uniform float elem2_tint_g
+	Uniform float elem2_tint_b
+	
+	Uniform float elem3_size
+	Uniform float elem3_scale
+	Uniform float elem3_intensity
+	Uniform float elem3_tint_r
+	Uniform float elem3_tint_g
+	Uniform float elem3_tint_b
+	
+	Uniform float elem4_size
+	Uniform float elem4_scale
+	Uniform float elem4_intensity
+	Uniform float elem4_tint_r
+	Uniform float elem4_tint_g
+	Uniform float elem4_tint_b
+	
+	Uniform float elem5_size
+	Uniform float elem5_scale
+	Uniform float elem5_intensity
+	Uniform float elem5_tint_r
+	Uniform float elem5_tint_g
+	Uniform float elem5_tint_b
+}

@@ -1,0 +1,77 @@
+AddOptionMenu "OptionsMenu"
+{
+    Submenu "Lens Flare Options", "ClfLensFlareOptions"
+}
+
+OptionMenu "ClfLensFlareOptions"
+{
+	Position -15
+	Title "LENS FLARE OPTIONS"
+	
+	Option "Enable Lens Flares", "clf_pp_lensflares", "YesNo"
+	StaticText ""
+	StaticText "=== GENERAL SETTINGS ===", 1
+	Slider "Overall Amount", "clf_pp_lensflares_amount", 0.0, 2.0, 0.05, 2
+	Slider "Brightness Threshold", "clf_pp_lensflares_threshold", 0.0, 1.0, 0.05, 2
+	Slider "Samples Per Element", "clf_pp_lensflares_samples", 4, 32, 2, 0
+	Slider "Distance Step", "clf_pp_lensflares_distance", 0.001, 0.02, 0.001, 3
+	
+	StaticText ""
+	StaticText "=== CHROMATIC ABERRATION ===", 1
+	Slider "Aberration Strength", "clf_pp_lensflares_chromatic", 0.0, 2.0, 0.1, 1
+	Slider "Aberration Blend", "clf_pp_lensflares_chromatic_blend", 0.0, 1.0, 0.05, 2
+	
+	StaticText ""
+	StaticText "=== ELEMENT 0: WARM ===", 1
+	Slider "Size", "clf_pp_lensflares_elem0_size", 0.0, 2.0, 0.05, 2
+	Slider "Scale Direction", "clf_pp_lensflares_elem0_scale", -2.0, 2.0, 0.1, 1
+	Slider "Intensity", "clf_pp_lensflares_elem0_intensity", 0.0, 2.0, 0.1, 1
+	Slider "Tint Red", "clf_pp_lensflares_elem0_tint_r", 0.0, 1.0, 0.05, 2
+	Slider "Tint Green", "clf_pp_lensflares_elem0_tint_g", 0.0, 1.0, 0.05, 2
+	Slider "Tint Blue", "clf_pp_lensflares_elem0_tint_b", 0.0, 1.0, 0.05, 2
+	
+	StaticText ""
+	StaticText "=== ELEMENT 1: COOL BLUE ===", 1
+	Slider "Size", "clf_pp_lensflares_elem1_size", 0.0, 2.0, 0.05, 2
+	Slider "Scale Direction", "clf_pp_lensflares_elem1_scale", -2.0, 2.0, 0.1, 1
+	Slider "Intensity", "clf_pp_lensflares_elem1_intensity", 0.0, 2.0, 0.1, 1
+	Slider "Tint Red", "clf_pp_lensflares_elem1_tint_r", 0.0, 1.0, 0.05, 2
+	Slider "Tint Green", "clf_pp_lensflares_elem1_tint_g", 0.0, 1.0, 0.05, 2
+	Slider "Tint Blue", "clf_pp_lensflares_elem1_tint_b", 0.0, 1.0, 0.05, 2
+	
+	StaticText ""
+	StaticText "=== ELEMENT 2: PINK ===", 1
+	Slider "Size", "clf_pp_lensflares_elem2_size", 0.0, 2.0, 0.05, 2
+	Slider "Scale Direction", "clf_pp_lensflares_elem2_scale", -2.0, 2.0, 0.1, 1
+	Slider "Intensity", "clf_pp_lensflares_elem2_intensity", 0.0, 2.0, 0.1, 1
+	Slider "Tint Red", "clf_pp_lensflares_elem2_tint_r", 0.0, 1.0, 0.05, 2
+	Slider "Tint Green", "clf_pp_lensflares_elem2_tint_g", 0.0, 1.0, 0.05, 2
+	Slider "Tint Blue", "clf_pp_lensflares_elem2_tint_b", 0.0, 1.0, 0.05, 2
+	
+	StaticText ""
+	StaticText "=== ELEMENT 3: CYAN ===", 1
+	Slider "Size", "clf_pp_lensflares_elem3_size", 0.0, 2.0, 0.05, 2
+	Slider "Scale Direction", "clf_pp_lensflares_elem3_scale", -2.0, 2.0, 0.1, 1
+	Slider "Intensity", "clf_pp_lensflares_elem3_intensity", 0.0, 2.0, 0.1, 1
+	Slider "Tint Red", "clf_pp_lensflares_elem3_tint_r", 0.0, 1.0, 0.05, 2
+	Slider "Tint Green", "clf_pp_lensflares_elem3_tint_g", 0.0, 1.0, 0.05, 2
+	Slider "Tint Blue", "clf_pp_lensflares_elem3_tint_b", 0.0, 1.0, 0.05, 2
+	
+	StaticText ""
+	StaticText "=== ELEMENT 4: YELLOW (ZOOM OUT) ===", 1
+	Slider "Size", "clf_pp_lensflares_elem4_size", 0.0, 2.0, 0.05, 2
+	Slider "Scale Direction", "clf_pp_lensflares_elem4_scale", -2.0, 2.0, 0.1, 1
+	Slider "Intensity", "clf_pp_lensflares_elem4_intensity", 0.0, 2.0, 0.1, 1
+	Slider "Tint Red", "clf_pp_lensflares_elem4_tint_r", 0.0, 1.0, 0.05, 2
+	Slider "Tint Green", "clf_pp_lensflares_elem4_tint_g", 0.0, 1.0, 0.05, 2
+	Slider "Tint Blue", "clf_pp_lensflares_elem4_tint_b", 0.0, 1.0, 0.05, 2
+	
+	StaticText ""
+	StaticText "=== ELEMENT 5: PURPLE ===", 1
+	Slider "Size", "clf_pp_lensflares_elem5_size", 0.0, 2.0, 0.05, 2
+	Slider "Scale Direction", "clf_pp_lensflares_elem5_scale", -2.0, 2.0, 0.1, 1
+	Slider "Intensity", "clf_pp_lensflares_elem5_intensity", 0.0, 2.0, 0.1, 1
+	Slider "Tint Red", "clf_pp_lensflares_elem5_tint_r", 0.0, 1.0, 0.05, 2
+	Slider "Tint Green", "clf_pp_lensflares_elem5_tint_g", 0.0, 1.0, 0.05, 2
+	Slider "Tint Blue", "clf_pp_lensflares_elem5_tint_b", 0.0, 1.0, 0.05, 2
+}
